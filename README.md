@@ -1,7 +1,7 @@
 # Kasa
 Projet 7 : Kasa - Agence de location immobilière
 
-#Installation :
+## Installation :
 
 Installer les dépendances avec la commande npm install
 
