@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className="header">
             <Link to={'/'}>
-                <img src="./LOGO.svg" alt="Logo de KASA" />
+                <img src="./logo.png" alt="Logo de KASA" />
             </Link>
             <ul>
                 <li>
