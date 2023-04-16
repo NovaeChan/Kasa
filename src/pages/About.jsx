@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Banner from '../components/Banner/Banner';
 
 const About = () => {
     return (
         <div>
             <Header />
+            <Banner />
             <h1>A propos</h1>
             <p>
                 Ullamco ut duis quis amet. Commodo aliqua non esse sunt sunt
@@ -26,6 +29,7 @@ const About = () => {
                 commodo in cupidatat. Laborum pariatur commodo culpa ut officia
                 nostrud voluptate fugiat Lorem pariatur duis minim.
             </p>
+            <Footer />
         </div>
     );
 };

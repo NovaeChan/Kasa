@@ -1,0 +1,27 @@
+.banner{
+    @include flex;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image.png');
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    max-width: 90%;
+    padding: 20px;
+    margin: 43px auto;
+    p{
+        color: $text-color;
+        font-size: 48px;
+        font-weight: 500;
+    }
+    &_about{
+        @include flex;
+        border-radius: 25px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image-about.png');
+        background-position: center;
+        background-size: cover;
+        height: 223px;
+        max-width: 90%;
+        padding: 20px;
+        margin: 43px auto;
+    }
+}

@@ -1,0 +1,31 @@
+@import '../_settings.scss';
+@import '../components/footer.scss';
+
+
+
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    &-title{
+        font-size: 248px;
+        font-weight: 700;
+        line-height: 142.6%;;
+    }
+    &-description{
+        line-height: 142.6%;
+        font-size: 36px;
+        margin-bottom: 10%;
+    }
+    &-link{
+        font-size: 18px;
+        text-decoration-line: underline !important;
+        line-height: 142.6%;
+    }
+}
+
+
