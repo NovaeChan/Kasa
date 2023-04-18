@@ -1,0 +1,48 @@
+@import '../settings';
+@import '../utils/mixin';
+
+.carousel{
+    display: block;
+    @include max-width;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 415px;
+    border-radius: 25px;
+    position: relative;
+    &_img{
+        border-radius: 25px;
+        object-fit: cover;
+        display: none;
+        width: 100%;
+        height: 415px;
+    }
+}
+.active{
+    display: block;
+}
+.arrow{
+    position: absolute;
+    width: 45px;
+    z-index: 1;
+    &:hover{
+        cursor: pointer;
+    }
+    &_left{
+        margin-left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &_right{
+        margin-right: 25px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+.slideNumber{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $text-color;
+}

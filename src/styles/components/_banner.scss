@@ -1,27 +1,38 @@
 .banner{
     @include flex;
+    @include max-width;
     border-radius: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background-position: center;
     background-size: cover;
-    height: 223px;
-    max-width: 90%;
-    padding: 20px;
+    height: 225px;
     margin: 43px auto;
-    p{
-        color: $text-color;
-        font-size: 48px;
-        font-weight: 500;
-    }
+    position: relative;
     &_about{
         @include flex;
         border-radius: 25px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image-about.png');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
         background-position: center;
         background-size: cover;
         height: 223px;
         max-width: 90%;
         padding: 20px;
         margin: 43px auto;
+    }
+    &_image{
+        border-radius: 25px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        filter: brightness(65%);
+    }
+    &_content{
+        color: #ffffff;
+        font-size: 48px;
+        left: 48%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%,-50%);
     }
 }

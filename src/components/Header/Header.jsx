@@ -1,14 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Logo from '../../assets/images/logo.png';
+
 const Header = () => {
     return (
         <div className="header">
             <Link to={'/'}>
-                <img src="./logo.png" alt="Logo de KASA" />
+                <img src={Logo} alt="Logo Kasa" />
             </Link>
-            <ul>
-                <li>
+            <ul className="nav">
+                <li
+                    className={
+                        window.location.pathname === '/'
+                            ? 'nav_item_active'
+                            : 'nav_item'
+                    }
+                >
                     <Link
                         to={'/'}
                         className='{(nav) => (nav.isActive ? "nav-active" : "")}'
@@ -16,7 +24,13 @@ const Header = () => {
                         Accueil
                     </Link>
                 </li>
-                <li>
+                <li
+                    className={
+                        window.location.pathname === '/About'
+                            ? 'nav_item_active'
+                            : 'nav_item'
+                    }
+                >
                     <Link
                         to={'/About'}
                         className='{(nav) => (nav.isActive ? "nav-active" : "")}'
