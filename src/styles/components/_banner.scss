@@ -1,38 +1,45 @@
 .banner{
     @include flex;
     @include max-width;
-    border-radius: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image.png');
     background-position: center;
     background-size: cover;
+    border-radius: 25px;
     height: 225px;
     margin: 43px auto;
     position: relative;
+    @media screen and (max-width: 900px) {
+        @include max-width-mobile;
+        height: 115px;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        justify-content: start;
+        padding: 15px;
+    }
     &_about{
         @include flex;
+        @include max-width;
         border-radius: 25px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/images/banner-image-about.png');
         background-position: center;
         background-size: cover;
         height: 223px;
-        max-width: 90%;
         padding: 20px;
         margin: 43px auto;
-    }
-    &_image{
-        border-radius: 25px;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-        filter: brightness(65%);
+        @media screen and (max-width: 900px) {
+            @include max-width-mobile;
+            margin-bottom: 15px;
+        }
     }
     &_content{
-        color: #ffffff;
+        font-size: 24px;
+        color: #FFFFFF;
         font-size: 48px;
-        left: 48%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%,-50%);
+        font-weight: 500;
+        @media screen and (max-width: 900px) {
+            width: 58%;
+            font-size: 24px;
+        }
     }
 }

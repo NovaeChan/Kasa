@@ -14,7 +14,16 @@
         object-fit: cover;
         display: none;
         width: 100%;
-        height: 415px;
+        height: 100%;
+        @media screen and (max-width: 900px) {
+            border-radius: 10px;
+        }
+    }
+    @media screen and  (max-width: 900px) {
+        @include max-width-mobile;
+        margin-top: 25px;
+        border-radius: 10px;
+        height: 255px;
     }
 }
 .active{
@@ -37,6 +46,10 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%) rotate(180deg);
+    }
+    @media screen and (max-width: 900px) {
+        width: 12px;
+        height: 20px;
     }
 }
 .slideNumber{

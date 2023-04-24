@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Banner = ({ image, content }) => {
-    return (
-        <div className="banner">
-            <img className="banner_image" src={image} alt="Bannière" />
-            <span className="banner_content">{content}</span>
-        </div>
-    );
-};
+    const [about, setAbout] = useState(false)
+    const location = useLocation()
+    useEffect(() => {
+        if (location.pathname === '/About') {
+            setAbout(true)
+        }
+    }, [location])
 
-export default Banner;
+    return (
+        <div className={about ? 'banner_about' : 'banner'}>
+            {!about && <p className="banner_content">{content}</p>}
+        </div>
+    )
+}
+
+export default Banner

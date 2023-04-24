@@ -8,3 +8,7 @@
 @mixin max-width{
     max-width: 80%;
 }
+
+@mixin max-width-mobile{
+    max-width: 90%;
+}

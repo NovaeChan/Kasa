@@ -24,6 +24,18 @@
         text-decoration-line: underline !important;
         line-height: 142.6%;
     }
+    @media screen and (max-width: 900px) {
+        min-height: 90vh;
+        &-title{
+            font-size: 96px;
+        }
+        &-description{
+            font-size: 18px;
+        }
+        &-link{
+            font-size: 14px;
+        }
+    }
 }
 
 

@@ -10,6 +10,14 @@
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 50px 60px; 
     padding: 55px 50px;
+    @media screen and (max-width: 900px) {
+        @include flex;
+        @include max-width-mobile;
+        background-color: #FFFFFF;
+        flex-wrap: wrap;
+        gap: 20px; 
+        padding: 0px;
+    }
     &_card{
         position: relative;
         height: 100%;
@@ -23,6 +31,9 @@
             color: $text-color;
             font-size: 18px;
         }
+        @media screen and (max-width: 900px) {
+            min-height: 255px;
+        }
     }
     img{
         border-radius: 10px;
@@ -33,6 +44,9 @@
         &:hover{
             background-color: linear-gradient(180deg, #ff6060 85%, #000000a6 100%);
             opacity: 0.50;
+        }
+        @media screen and (max-width: 900px) {
+            min-height: 255px;
         }
     }
 }

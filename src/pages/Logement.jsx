@@ -1,42 +1,42 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
-import Header from '../components/Header/Header';
-import Carousel from '../components/Carousel/Carousel';
-import Dropdown from '../components/Dropdown/Dropdown';
-import Footer from '../components/Footer/Footer';
-import logements from '../apiCall/logements.json';
+import React from 'react'
+import { Navigate, useParams } from 'react-router-dom'
+import Header from '../components/Header/Header'
+import Carousel from '../components/Carousel/Carousel'
+import Dropdown from '../components/Dropdown/Dropdown'
+import Footer from '../components/Footer/Footer'
+import logements from '../apiCall/logements.json'
 
-import greyStar from '../assets/images/greyStar.png';
-import redStar from '../assets/images/redStar.png';
+import greyStar from '../assets/images/greyStar.png'
+import redStar from '../assets/images/redStar.png'
 
-import '../styles/pages/logements.scss';
+import '../styles/pages/logements.scss'
 
 const Logement = () => {
-    const currentIdtLogement = useParams().id;
+    const currentIdtLogement = useParams().id
     const logementData = logements.find(
         (logement) => logement.id === currentIdtLogement
-    );
-    const rating = logementData && logementData.rating;
+    )
+    const rating = logementData && logementData.rating
     const stars = [...Array(5)].map((star, index) => {
-        const ratingValue = index + 1;
+        const ratingValue = index + 1
         return (
             <img
                 key={index}
                 src={ratingValue <= rating ? redStar : greyStar}
                 alt="note"
             />
-        );
-    });
+        )
+    })
 
     const tags =
         logementData &&
         logementData?.tags.map((tag, index) => {
             return (
-                <p key={index} className="logement_tag">
+                <button key={index} className="logement_tag">
                     {tag}
-                </p>
-            );
-        });
+                </button>
+            )
+        })
 
     return (
         <div>
@@ -86,7 +86,7 @@ const Logement = () => {
                 <Navigate replace to="/404" />
             )}
         </div>
-    );
-};
+    )
+}
 
-export default Logement;
+export default Logement
