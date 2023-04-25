@@ -6,7 +6,6 @@
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 35px;
-    
     &_header{
         display: flex;
         justify-content: space-between;
@@ -28,6 +27,7 @@
         display: flex;
         justify-content: flex-end;
         margin-right: 25px;
+        transition: all 0.3s ease-in-out;
     }
     &_chevron.true{
         transform: rotate(180deg);
@@ -38,7 +38,14 @@
         color: #FF6060;
         font-size: 24px;
         font-weight: 400;
-        padding: 36px 27px 18px 18px;
+        padding: 36px 27px 18px 18px;        
+    }
+    &_open {
+        transition: opacity 0.4s ease-in-out;
+    }
+    &_close {
+        visibility: hidden;
+        opacity: 0;
     }
     @media screen and (max-width: 900px) {
         @include max-width-mobile;

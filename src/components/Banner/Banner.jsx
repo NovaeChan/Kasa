@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
+import '../../styles/components/_banner.scss'
+
 const Banner = ({ image, content }) => {
     const [about, setAbout] = useState(false)
     const location = useLocation()

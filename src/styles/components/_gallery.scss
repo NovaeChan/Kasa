@@ -1,5 +1,4 @@
-@import '../utils/mixin';
-@import '../settings';
+@import '../index.scss';
 
 .gallery{
     margin: 0 auto;
@@ -17,36 +16,5 @@
         flex-wrap: wrap;
         gap: 20px; 
         padding: 0px;
-    }
-    &_card{
-        position: relative;
-        height: 100%;
-        min-height: 340px;
-        border-radius: 10px;
-        &_title{
-            max-width: 275px;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: $text-color;
-            font-size: 18px;
-        }
-        @media screen and (max-width: 900px) {
-            min-height: 255px;
-        }
-    }
-    img{
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        &:hover{
-            background-color: linear-gradient(180deg, #ff6060 85%, #000000a6 100%);
-            opacity: 0.50;
-        }
-        @media screen and (max-width: 900px) {
-            min-height: 255px;
-        }
     }
 }
