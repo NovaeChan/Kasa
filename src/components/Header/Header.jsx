@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo.png'
 import '../../styles/components/_header.scss'
@@ -7,7 +7,7 @@ import '../../styles/components/_header.scss'
 const Header = () => {
     return (
         <div className="header">
-            <Link to={'/'}>
+            <Link to="/">
                 <img src={Logo} alt="Logo Kasa" />
             </Link>
             <ul className="nav">
@@ -18,26 +18,26 @@ const Header = () => {
                             : 'nav_item'
                     }
                 >
-                    <Link
-                        to={'/'}
+                    <NavLink
+                        to="/"
                         className='{(nav) => (nav.isActive ? "nav-active" : "")}'
                     >
                         Accueil
-                    </Link>
+                    </NavLink>
                 </li>
                 <li
                     className={
-                        window.location.pathname === '/About'
+                        window.location.pathname === '/about'
                             ? 'nav_item_active'
                             : 'nav_item'
                     }
                 >
-                    <Link
-                        to={'/About'}
+                    <NavLink
+                        to="/about"
                         className='{(nav) => (nav.isActive ? "nav-active" : "")}'
                     >
                         A propos
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </div>

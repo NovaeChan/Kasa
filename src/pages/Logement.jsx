@@ -1,9 +1,7 @@
 import React from 'react'
 import { Navigate, useParams } from 'react-router-dom'
-import Header from '../components/Header/Header'
 import Carousel from '../components/Carousel/Carousel'
 import Dropdown from '../components/Dropdown/Dropdown'
-import Footer from '../components/Footer/Footer'
 import logements from '../apiCall/logements.json'
 
 import greyStar from '../assets/images/greyStar.png'
@@ -38,11 +36,12 @@ const Logement = () => {
             )
         })
 
+    document.title = 'Kasa - Logement'
+
     return (
         <div>
             {logementData ? (
                 <div>
-                    <Header />
                     <Carousel images={logementData.pictures} />
                     <div className="logement">
                         <div className="logement_content">
@@ -80,7 +79,6 @@ const Logement = () => {
                             />
                         </div>
                     </div>
-                    <Footer />
                 </div>
             ) : (
                 <Navigate replace to="/404" />

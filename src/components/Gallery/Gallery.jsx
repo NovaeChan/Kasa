@@ -1,11 +1,12 @@
 import React from 'react'
+
 import useFetch from '../../apiCall/useFetch'
 import Card from '../Cards/Card'
 
 import '../../styles/components/_gallery.scss'
 
 const MenuHouse = () => {
-    const logements = useFetch('/logements.json')
+    const logements = useFetch()
 
     return (
         <div className="gallery">

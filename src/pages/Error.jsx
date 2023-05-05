@@ -1,14 +1,12 @@
-import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import '../styles/pages/error.scss';
+import '../styles/pages/error.scss'
 
 const Error = () => {
+    document.title = 'Kasa - Error 404'
     return (
         <div className="wrapper">
-            <Header />
             <div className="error">
                 <h1 className="error-title">404</h1>
                 <p className="error-description">
@@ -18,9 +16,8 @@ const Error = () => {
                     Retourner sur la page d'Accueil
                 </Link>
             </div>
-            <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default Error;
+export default Error

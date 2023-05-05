@@ -1,11 +1,9 @@
-import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import Banner from '../components/Banner/Banner';
-import Dropdown from '../components/Dropdown/Dropdown';
-import bannerAbout from '../assets/images/banner-image-about.png';
+import React from 'react'
+import Banner from '../components/Banner/Banner'
+import Dropdown from '../components/Dropdown/Dropdown'
+import bannerAbout from '../assets/images/banner-image-about.png'
 
-import '../styles/pages/about.scss';
+import '../styles/pages/about.scss'
 
 const About = () => {
     const aboutItems = [
@@ -33,10 +31,10 @@ const About = () => {
             description:
                 "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
         },
-    ];
+    ]
+    document.title = 'Kasa - About'
     return (
         <div className="about">
-            <Header />
             <Banner image={bannerAbout} content="" />
             <div className="about_main">
                 {aboutItems.map((item, index) => {
@@ -47,13 +45,11 @@ const About = () => {
                                 content={item.description}
                             />
                         </div>
-                    );
+                    )
                 })}
             </div>
-
-            <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default About;
+export default About
